@@ -69,7 +69,10 @@ export class UserContreller {
     @User('id') id: number,
     @Body('user') updateUserDto: UpdateUserWithoutDto,
   ): Promise<UserResponseInterface> {
-    const updateUser = await this.userService.updateUserWithOutEmailAndUser(id, updateUserDto);
+    const updateUser = await this.userService.updateUserWithOutEmailAndUser(
+      id,
+      updateUserDto,
+    );
     console.log('updateUser: ', updateUser);
     return this.userService.buildUserResponse(updateUser);
   }

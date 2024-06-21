@@ -11,6 +11,7 @@ import { AuthMiddleware } from './user/middlewares/auth.middleware';
 import { ReviewsModule } from './reviews/reviews.module';
 import { BasketModule } from './basket/basket.module';
 import { ProdutsModule } from './products/products.module';
+import { ContactModule } from './contact/contact.module';
 
 @Module({
   imports: [
@@ -20,6 +21,7 @@ import { ProdutsModule } from './products/products.module';
     ReviewsModule,
     BasketModule,
     ProdutsModule,
+    ContactModule,
     ServeStaticModule.forRoot({
       rootPath: join(__dirname, '..', 'public'),
     }),
