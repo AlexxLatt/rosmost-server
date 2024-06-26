@@ -47,6 +47,9 @@ export class UserEntity {
   patromicName: string;
 
   @Column({ default: '' })
+  tel: string;
+
+  @Column({ default: '' })
   passportSeries: string;
 
   @Column({ default: '' })
